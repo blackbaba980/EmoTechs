@@ -4,37 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_theme"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/text_emotechs"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_menu_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/monotype_corsiva"
-        android:text="EmoTechs"
-        android:textColor="#000000"
-        android:textSize="95px"
-        app:layout_constraintBottom_toBottomOf="@+id/text_welcome_to"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/text_welcome_to"
-        app:layout_constraintTop_toTopOf="@+id/text_welcome_to"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/text_welcome_to"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_light"
-        android:text="Welcome To "
-        android:textColor="#000000"
-        android:textSize="80px"
+        android:backgroundTint="#FF0000"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_fab_menu"
+        app:fabCustomSize="55dp"
+        app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintHorizontal_bias="0.96"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.91" />
+
+
+    <WebView
+        android:id="@+id/youTubeMainPageViewer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29" >
+    </WebView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
