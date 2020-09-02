@@ -125,13 +125,17 @@ public class SignInActivity extends AppCompatActivity {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
-            assert account != null;
             String idToken = account.getIdToken();
+            String personEmail = account.getEmail();
+
 
             if (idToken != null) {
                 Log.e("Token", idToken );
                 UploadTask myTask = new UploadTask();
                 String result = myTask.execute(idToken).get();
+
+                //Intent informationForMain = new
+
 
                 startActivity(new Intent(SignInActivity.this, MainActivity.class));
                 finish();
